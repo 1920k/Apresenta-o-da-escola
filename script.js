@@ -11,6 +11,10 @@ on.addEventListener('click', function () {
        element.classList.add('style_card_ativo')
         element.innerHTML = valorInput
         card_ativo.appendChild(element);
+        element.addEventListener('click',function (elemt) {
+            card_ativo.removeChild(elemt.target);
+            console.log(elemt.target)
+        })
     } else {
         alert('Digite algo no input!')
     }
